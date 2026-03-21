@@ -75,6 +75,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def root():
+    return {"message": "Triage AI Backend is running", "status": "ok"}
+
+
 @app.post("/triage", response_model=TriageResponse)
 async def triage(payload: TriageRequest, request: Request) -> TriageResponse:
     req_id = request.headers.get("x-request-id") or str(uuid.uuid4())

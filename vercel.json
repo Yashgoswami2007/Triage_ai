@@ -2,7 +2,7 @@
   "devCommand": "uvicorn main:app --reload",
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/(.*)",
       "destination": "/main.py"
     }
   ]
