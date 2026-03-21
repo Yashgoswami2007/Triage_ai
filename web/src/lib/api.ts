@@ -20,10 +20,6 @@ export async function triageSymptoms(params: {
   symptoms: string;
   language?: string | null;
 }): Promise<TriageResponse> {
-  if (!API_URL) {
-    throw new Error("Missing NEXT_PUBLIC_TRIAGE_API_URL");
-  }
-
   const res = await fetch(`${API_URL}/triage`, {
     method: "POST",
     headers: {
