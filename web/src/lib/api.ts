@@ -14,7 +14,7 @@ export type TriageResponse = {
   reasoning?: string;
 };
 
-const API_URL = process.env.NEXT_PUBLIC_TRIAGE_API_URL || "";
+const API_URL = "https://triage-ai-tan.vercel.app";
 
 export async function triageSymptoms(params: {
   symptoms: string;
