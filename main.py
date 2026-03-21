@@ -49,7 +49,7 @@ def get_triage_service():
     global triage_service
     if triage_service is None:
         triage_service = get_service()
-        logger.info("Triage service initialized model=%s", os.environ.get("GEMINI_MODEL_NAME", "gemini-1.5-flash"))
+        logger.info("Triage service initialized model=%s", os.environ.get("OPENROUTER_MODEL", "deepseek/deepseek-chat:free"))
     return triage_service
 
 
